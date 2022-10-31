@@ -2,7 +2,7 @@
 Na ten moment zaimplementowana została komunikacja z API OpenWeather i wyświetlanie otrzymanych informacji. Dokładny opis modułów znajdujących się już w projekcie został umieszczony poniżej.
 
 ## Konfiguracja Api
-Plik konfiguracji Api, wraz z  plikiem nagłówkowym, zawierają składnię zapytania stworzonego  celu uzyskania danych o pogodzie w danym mieście. Zgodnie z informacją zawartą w pliku README projekt opiera się na API pogodowym Openweather. Każde zapytanie musi zawierać koordynaty danego miasta, w przypadku przykładowym jest to Londyn - LAT tj. szerokość = 51.5085, LON tj. długość geograficzna = -0.1257. Zmienić je można w pliku `ApiConfig.example.h`
+Plik konfiguracji Api, wraz z  plikiem nagłówkowym, zawierają składnię zapytania stworzonego  celu uzyskania danych o pogodzie w danym mieście. Zgodnie z informacją zawartą w pliku README projekt opiera się na API pogodowym Openweather. Każde zapytanie musi zawierać koordynaty danego miasta, w przypadku przykładowym jest to Londyn - LAT tj. szerokość = 51.5085, LON tj. długość geograficzna = -0.1257. Zmienić je można w pliku `ApiConfig.h` (w repozytorium znajduje się plik przykładowy `ApiConfig.example.h`)
 
 ## Konfiguracja wyświetlacza
 Konfiguracja wyświetlacza opiera się na podstawowej bibliotece Adafruit Display - więcej informacji dostępnych jest na [stronie Adafruit](https://learn.adafruit.com/adafruit-gfx-graphics-library)
@@ -11,7 +11,7 @@ Konfiguracja wyświetlacza opiera się na podstawowej bibliotece Adafruit Displa
 Odpowiedź serwera zawiera dużo niepotrzebnych w projekcie danych, więc obsługiwane są jedynie parametry konieczne do funkcjonowania stacji pogodowej. W module `JsonParser.cpp` zawarte są funkcje odpowiedzialne za zapis otrzymanej tempertury, temperatury odczuwalnej, ciśnienia i wilgotności, oraz dopasowanie strefy czasowej, godziny oraz daty.
 
 ## Konfiguracja Wi-FI
-Aby stacja mogła poprawnie pobierać dane konieczny jest ustawienie nazwy - WIFI_SSID - oraz hasła - WIFI_PASS. Umożliwione jest to w pliku `WifiConfig.example.h`.
+Aby stacja mogła poprawnie pobierać dane konieczny jest ustawienie nazwy - WIFI_SSID - oraz hasła - WIFI_PASS. Umożliwione jest to w pliku `WifiConfig.h` (w repozytorium znajduje się plik przykładowy `WiFiConfig.example.h`).
 
 ## Wysłanie zapytania
 Jeżeli Wi-FI zostało skonfigurowane poprawnie, to za pomocą funkcji `WiFiSetup` opisanej w `WebClient.cpp` ustawione zostanie połączenie umożliwiające komunikację. Status połączenia można uzyskać za pomocą funkcji `PrintWiFiStatus`, która wyświetli niewrażliwe dane na temat sieci.Zapytanie API odbywa się poprzez funkcję `ApiRequest`, która podejmuje próbę uzyskania danych pogodowych OpenWeather. Na każdym etapie koneksji użytkownik będzie informowany w przypadku wystąpienia nieprawidłowości połączenia, zapytania bądź odpowiedzi serwera.

@@ -13,6 +13,6 @@
   - [Konfiguracja Wi-FI](https://github.com/utbrott/iot-feather/wiki/2.-Obecnie-zaimplementowane#konfiguracja-wi-fi)
   - [Wysłanie zapytania](https://github.com/utbrott/iot-feather/wiki/2.-Obecnie-zaimplementowane#wys%C5%82anie-zapytania)
   - [Główne działanie stacji](https://github.com/utbrott/iot-feather/wiki/2.-Obecnie-zaimplementowane#wys%C5%82anie-zapytania)
-- [Praca z projektem]() 
+- [Praca z projektem](https://github.com/utbrott/iot-feather/wiki/3.-Praca-z-projektem) 
 
 ***
